@@ -7,4 +7,6 @@
 - (void)stopUpdating;
 - (void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController;
 
++ (GamePlayViewController *)shared;
+
 @end

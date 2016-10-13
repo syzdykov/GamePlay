@@ -475,7 +475,7 @@ unsigned int Platform::getDisplayWidth()
     else
 #endif
     {
-        CGSize size = DeviceOrientedSize([__appDelegate.viewController interfaceOrientation]);
+        CGSize size = DeviceOrientedSize([__appDelegate.gamePlayViewController interfaceOrientation]);
         return size.width;
     }
 }
@@ -491,7 +491,7 @@ unsigned int Platform::getDisplayHeight()
     else
 #endif
     {
-        CGSize size = DeviceOrientedSize([__appDelegate.viewController interfaceOrientation]);
+        CGSize size = DeviceOrientedSize([__appDelegate.gamePlayViewController interfaceOrientation]);
         return size.height;
     }
 }

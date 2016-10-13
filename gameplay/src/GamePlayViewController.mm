@@ -79,4 +79,10 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
++ (GamePlayViewController *)shared
+{
+    GamePlayAppDelegate *delegate = (GamePlayAppDelegate *)[UIApplication sharedApplication].delegate;    
+    return delegate.gamePlayViewController;
+}
+
 @end

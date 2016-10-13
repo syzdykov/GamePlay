@@ -3,21 +3,25 @@
 #import "GamePlayViewController.h"
 
 @implementation GamePlayAppDelegate
-@synthesize viewController, window;
+@synthesize window;
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
-    __appDelegate = self;
+    [self setGlobalGamePlayAppDelegate];
     [UIApplication sharedApplication].statusBarHidden = YES;
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
     
     [self startMotionUpdate];
     
     window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    viewController = [self createGamePlayViewController];
-    [window setRootViewController:viewController];
+    [self createGamePlayViewController];
+    [window setRootViewController:self.gamePlayViewController];
     [window makeKeyAndVisible];
     return YES;
+}
+
+- (void)setGlobalGamePlayAppDelegate {
+    __appDelegate = self;
 }
 
 - (void)startMotionUpdate
@@ -35,9 +39,9 @@
     }
 }
 
-- (GamePlayViewController *)createGamePlayViewController
+- (void)createGamePlayViewController
 {
-    return [[GamePlayViewController alloc] init];
+    self.gamePlayViewController = [[GamePlayViewController alloc] init];
 }
 
 - (BOOL)prefersStatusBarHidden
@@ -112,33 +116,33 @@
 
 - (void)applicationWillResignActive:(UIApplication*)application
 {
-    [viewController stopUpdating];
+    [self.gamePlayViewController stopUpdating];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication*)application
 {
-    [viewController stopUpdating];
+    [self.gamePlayViewController stopUpdating];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication*)application
 {
-    [viewController startUpdating];
+    [self.gamePlayViewController startUpdating];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication*)application
 {
-    [viewController startUpdating];
+    [self.gamePlayViewController startUpdating];
 }
 
 - (void)applicationWillTerminate:(UIApplication*)application
 {
-    [viewController stopUpdating];
+    [self.gamePlayViewController stopUpdating];
 }
 
 - (void)dealloc
 {
     [window setRootViewController:nil];
-    [viewController release];
+    [self.gamePlayViewController release];
     [window release];
     [motionManager release];
     [super dealloc];
