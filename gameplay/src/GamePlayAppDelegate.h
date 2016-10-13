@@ -3,10 +3,10 @@
 
 @interface GamePlayAppDelegate : UIResponder<UIApplicationDelegate>
 {
-    UIWindow* window;
     GamePlayViewController* viewController;
     CMMotionManager *motionManager;
 }
 @property (nonatomic, retain) GamePlayViewController *viewController;
+@property (strong, nonatomic) UIWindow *window;
 
 @end

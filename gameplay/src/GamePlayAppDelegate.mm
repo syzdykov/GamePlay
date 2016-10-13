@@ -3,7 +3,7 @@
 #import "GamePlayViewController.h"
 
 @implementation GamePlayAppDelegate
-@synthesize viewController;
+@synthesize viewController, window;
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {

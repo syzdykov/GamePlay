@@ -42,6 +42,7 @@ extern CGPoint  __gestureLongPressStartPosition;
 extern bool __gestureDraging;
 extern GamePlayAppDelegate *__appDelegate;
 extern GamePlayView* __view;
+extern Class __appDelegateClass;
 
 
 #endif
