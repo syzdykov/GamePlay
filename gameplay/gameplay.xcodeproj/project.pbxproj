@@ -504,6 +504,9 @@
 		42D9299C1A6051EC0073258D /* Drawable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42D929991A6051EC0073258D /* Drawable.cpp */; };
 		42ECC3FA1A4EF5A00036C839 /* Text.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42ECC3F81A4EF5A00036C839 /* Text.cpp */; };
 		42ECC3FB1A4EF5A00036C839 /* Text.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42ECC3F81A4EF5A00036C839 /* Text.cpp */; };
+		4A98AC4C1DAED949003D647D /* GamePlayView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4A98AC441DAEC4FD003D647D /* GamePlayView.mm */; };
+		4A98AC4D1DAEDA05003D647D /* GamePlayViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4A98AC3F1DAEC1D1003D647D /* GamePlayViewController.mm */; };
+		4A98AC4E1DAEDA0A003D647D /* GamePlayAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4A98AC3C1DAEC03C003D647D /* GamePlayAppDelegate.mm */; };
 		5B21E99616153890006EBEAC /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B21E99516153890006EBEAC /* IOKit.framework */; };
 		5B2BC75F1512514500D176CD /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B2BC75D1512514500D176CD /* OpenAL.framework */; };
 		5B2BC7601512514500D176CD /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B2BC75E1512514500D176CD /* OpenGL.framework */; };
@@ -1041,6 +1044,13 @@
 		42D9299A1A6051EC0073258D /* Drawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Drawable.h; path = src/Drawable.h; sourceTree = SOURCE_ROOT; };
 		42ECC3F81A4EF5A00036C839 /* Text.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Text.cpp; path = src/Text.cpp; sourceTree = SOURCE_ROOT; };
 		42ECC3F91A4EF5A00036C839 /* Text.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Text.h; path = src/Text.h; sourceTree = SOURCE_ROOT; };
+		4A98AC3B1DAEC03C003D647D /* GamePlayAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GamePlayAppDelegate.h; path = src/GamePlayAppDelegate.h; sourceTree = SOURCE_ROOT; };
+		4A98AC3C1DAEC03C003D647D /* GamePlayAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GamePlayAppDelegate.mm; path = src/GamePlayAppDelegate.mm; sourceTree = SOURCE_ROOT; };
+		4A98AC3E1DAEC1D1003D647D /* GamePlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GamePlayViewController.h; path = src/GamePlayViewController.h; sourceTree = SOURCE_ROOT; };
+		4A98AC3F1DAEC1D1003D647D /* GamePlayViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GamePlayViewController.mm; path = src/GamePlayViewController.mm; sourceTree = SOURCE_ROOT; };
+		4A98AC431DAEC4FD003D647D /* GamePlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GamePlayView.h; path = src/GamePlayView.h; sourceTree = SOURCE_ROOT; };
+		4A98AC441DAEC4FD003D647D /* GamePlayView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GamePlayView.mm; path = src/GamePlayView.mm; sourceTree = SOURCE_ROOT; };
+		4A98AC4F1DAEDDFE003D647D /* PlatformIOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PlatformIOS.h; path = src/PlatformIOS.h; sourceTree = SOURCE_ROOT; };
 		5B04C5CA14BFCFE100EB0071 /* libgameplay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libgameplay.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B21E99516153890006EBEAC /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		5B2BC75D1512514500D176CD /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -1388,6 +1398,8 @@
 		4234D9A314686C52003031B3 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				4A98AC3B1DAEC03C003D647D /* GamePlayAppDelegate.h */,
+				4A98AC3C1DAEC03C003D647D /* GamePlayAppDelegate.mm */,
 				420BBAA51817416D00C7B720 /* lua */,
 				42CC52F71809A4EB00AAD8AD /* AbsoluteLayout.cpp */,
 				42CC52F81809A4EB00AAD8AD /* AbsoluteLayout.h */,
@@ -1641,6 +1653,11 @@
 				42CC55661809A4EE00AAD8AD /* VertexFormat.h */,
 				42CC55671809A4EE00AAD8AD /* VerticalLayout.cpp */,
 				42CC55681809A4EE00AAD8AD /* VerticalLayout.h */,
+				4A98AC3E1DAEC1D1003D647D /* GamePlayViewController.h */,
+				4A98AC3F1DAEC1D1003D647D /* GamePlayViewController.mm */,
+				4A98AC431DAEC4FD003D647D /* GamePlayView.h */,
+				4A98AC441DAEC4FD003D647D /* GamePlayView.mm */,
+				4A98AC4F1DAEDDFE003D647D /* PlatformIOS.h */,
 			);
 			name = src;
 			path = gameplay;
@@ -2036,6 +2053,7 @@
 				424F33271A60C28600395438 /* lua_BoundingBox.cpp in Sources */,
 				42CC593F1809A4EF00AAD8AD /* PhysicsConstraint.cpp in Sources */,
 				42CC55991809A4EF00AAD8AD /* AudioBuffer.cpp in Sources */,
+				4A98AC4E1DAEDA0A003D647D /* GamePlayAppDelegate.mm in Sources */,
 				424F33DD1A60C28600395438 /* lua_Technique.cpp in Sources */,
 				42CC55A51809A4EF00AAD8AD /* AudioSource.cpp in Sources */,
 				424F33511A60C28600395438 /* lua_Gamepad.cpp in Sources */,
@@ -2044,6 +2062,7 @@
 				42CC56171809A4EF00AAD8AD /* Joint.cpp in Sources */,
 				424F33851A60C28600395438 /* lua_Pass.cpp in Sources */,
 				424F33491A60C28600395438 /* lua_Form.cpp in Sources */,
+				4A98AC4C1DAED949003D647D /* GamePlayView.mm in Sources */,
 				424F340B1A60C28600395438 /* lua_VerticalLayout.cpp in Sources */,
 				424F33651A60C28600395438 /* lua_Layout.cpp in Sources */,
 				424F333F1A60C28600395438 /* lua_Drawable.cpp in Sources */,
@@ -2241,6 +2260,7 @@
 				42CC55F31809A4EF00AAD8AD /* Game.cpp in Sources */,
 				42CC59111809A4EF00AAD8AD /* Mesh.cpp in Sources */,
 				424F33E31A60C28600395438 /* lua_Text.cpp in Sources */,
+				4A98AC4D1DAEDA05003D647D /* GamePlayViewController.mm in Sources */,
 				42CC55DB1809A4EF00AAD8AD /* FileSystem.cpp in Sources */,
 				42CC59631809A4EF00AAD8AD /* PhysicsVehicle.cpp in Sources */,
 				42ECC3FB1A4EF5A00036C839 /* Text.cpp in Sources */,
