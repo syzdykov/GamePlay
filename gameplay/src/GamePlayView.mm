@@ -359,9 +359,8 @@ using namespace gameplay;
         // If the framebuffer needs (re)creating, do so
         if (updateFramebuffer)
         {
-            updateFramebuffer = NO;
             [self deleteFramebuffer];
-            [self createFramebuffer];
+            updateFramebuffer = ![self createFramebuffer];
             
             // Start the game after our framebuffer is created for the first time.
             if (game == nil)

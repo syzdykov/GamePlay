@@ -10,5 +10,6 @@
 
 - (void)setGlobalGamePlayAppDelegate;
 - (void)createGamePlayViewController;
+- (void)startMotionUpdate;
 
 @end
