@@ -118,7 +118,8 @@ using namespace gameplay;
     // NOTE: Current disabled since we need to have a way to reset the default frame buffer handle
     // in FrameBuffer.cpp (for FrameBuffer:bindDefault). This means that changing orientation at
     // runtime is currently not supported until we fix this.
-    //updateFramebuffer = YES;
+    [super layoutSubviews];
+    updateFramebuffer = YES;
 }
 
 - (BOOL)createFramebuffer
