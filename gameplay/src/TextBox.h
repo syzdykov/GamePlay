@@ -59,7 +59,7 @@ public:
      * @return The type name of this class: "TextBox"
      * @see ScriptTarget::getTypeName()
      */
-    const char* getTypeName() const;
+    const char* getTypeName() const override;
 
     /**
      * Returns the current location of the caret with the text of this TextBox.
@@ -110,7 +110,7 @@ public:
      */
     InputMode getInputMode() const;
 
-    virtual void addListener(Control::Listener* listener, int eventFlags);
+    virtual void addListener(Control::Listener* listener, int eventFlags) override;
 
     /**
      * Update the text being edited.
@@ -142,7 +142,7 @@ protected:
     /**
      * @see Control::initialize
      */
-    void initialize(const char* typeName, Theme::Style* style, Properties* properties);
+    void initialize(const char* typeName, Theme::Style* style, Properties* properties) override;
 
     /**
      * Touch callback on touch events.  Controls return true if they consume the touch event.
@@ -156,7 +156,7 @@ protected:
      *
      * @see Touch::TouchEvent
      */
-    bool touchEvent(Touch::TouchEvent evt, int x, int y, unsigned int contactIndex);
+    bool touchEvent(Touch::TouchEvent evt, int x, int y, unsigned int contactIndex) override;
 
     /**
      * Keyboard callback on key events.
@@ -168,27 +168,27 @@ protected:
      * @see Keyboard::KeyEvent
      * @see Keyboard::Key
      */
-    bool keyEvent(Keyboard::KeyEvent evt, int key);
+    bool keyEvent(Keyboard::KeyEvent evt, int key) override;
 
     /**
      * @see Control#controlEvent
      */
-    void controlEvent(Control::Listener::EventType evt);
+    void controlEvent(Control::Listener::EventType evt) override;
 
     /**
      * @see Control::updateState
      */
-    void updateState(State state);
+    void updateState(State state) override;
 
     /**
      * @see Control::drawImages
      */
-    unsigned int drawImages(Form* form, const Rectangle& clip);
+    unsigned int drawImages(Form* form, const Rectangle& clip) override;
 
     /**
      * @see Control::drawText
      */
-    unsigned int drawText(Form* form, const Rectangle& clip);
+    unsigned int drawText(Form* form, const Rectangle& clip) override;
 
     /**
      * Gets an InputMode by string.

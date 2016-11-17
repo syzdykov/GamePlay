@@ -198,7 +198,10 @@ extern int strcmpnocase(const char* s1, const char* s2);
 #endif
 
 // Compressed Media
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wshorten-64-to-32"
 #include <vorbis/vorbisfile.h>
+#pragma clang diagnostic pop
 
 // Image
 #include <png.h>
